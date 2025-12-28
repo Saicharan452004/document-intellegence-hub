@@ -1,4 +1,4 @@
-📄 Document Intelligence & Knowledge Search Hub
+📄 **Document Intelligence & Knowledge Search Hub**
 
 Turn your documents into instant answers.
 
@@ -6,7 +6,11 @@ Upload PDFs or text files → ask questions → get AI-powered responses backed 
 
 Built with MERN + RAG-style retrieval.
 
-🚀 Features
+🚀 **Live Demo**
+
+Use the app here:https://document-intellegence-hub.vercel.app/
+
+🚀 **Features**
 
 Authentication — signup & login with JWT
 
@@ -26,9 +30,9 @@ Delete uploaded documents
 
 Deployed (Backend on Render, Frontend on Vercel)
 
-🏗️ Tech Stack
+🏗️ **Tech Stack**
 
-Frontend
+**Frontend**
 
 React (Create React App)
 
@@ -36,7 +40,7 @@ Fetch API
 
 Protected routes
 
-Backend
+**Backend**
 
 Node + Express
 
@@ -48,19 +52,27 @@ PDF parsing
 
 REST APIs
 
-Database
+**Database**
 
 MongoDB Atlas
 
-AI
+**AI**
 
-Running Locally (Dev Mode)
+**Running Locally (Dev Mode)**
 
-1️⃣ Backend
+1️⃣ **Backend**
 
 cd backend
 
 npm install
+
+Create .env with:
+
+MONGO_URL=your_mongo_uri
+
+JWT_SECRET=your_jwt_secret
+
+GROQ_API_KEY=your_groq_api_key
 
 npm start
 
@@ -69,7 +81,7 @@ Runs at:
 
 http://localhost:5000
 
-2️⃣ Frontend
+2️⃣ **Frontend**
 
 cd frontend
 
@@ -82,7 +94,7 @@ Runs at:
 
 http://localhost:3000
 
-Live Deployment 
+**Live Deployment** 
 
 Backend: Render (Node Service)
 
@@ -92,15 +104,15 @@ Frontend uses environment variable:
 
 REACT_APP_API_BASE=https://YOUR-BACKEND.onrender.com
 
-Key API Endpoints
+**Key API Endpoints**
 
-Auth
+**Auth**
 
 POST /auth/signup
 
 POST /auth/login
 
-Documents
+**Documents**
 
 GET    /documents
 
@@ -108,16 +120,12 @@ POST   /documents/upload
 
 DELETE /documents/:id
 
-⚠️ Known Limitations
+⚠️ **Known Limitations**
 
 Embeddings are replaced with a simpler “recent chunk” heuristic (free-tier friendly).
 
 Large PDFs may respond slower.
 
 Query history resets on page refresh.
-
-🚀 Live Demo
-
-Use the app here:https://document-intellegence-hub.vercel.app/
 
 Groq API (Llama model — fast + cost-free tier)
