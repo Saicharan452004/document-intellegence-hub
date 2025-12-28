@@ -1,5 +1,7 @@
 import { useState } from "react";
-import API_BASE from "../../config"; 
+import { useNavigate } from "react-router-dom";
+import { saveToken } from "../../auth";
+import API_BASE from "../../config";
 import "./Signup.css";
 
 function Signup() {
@@ -7,22 +9,35 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
 
+  const navigate = useNavigate();
+
   async function handleSubmit(e) {
-    e.preventDefault();
+  e.preventDefault();
+  const res = await fetch(`${API_BASE}/auth/signup`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
+  });
+  const data = await res.json();
+  setMsg(data.message || "Account created successfully");
+  if (!res.ok) return;
+  const loginRes = await fetch(`${API_BASE}/auth/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
+  });
 
-    const res = await fetch(`${API_BASE}/auth/signup`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password })
-    });
+  const loginData = await loginRes.json();
 
-    const data = await res.json();
-    setMsg(data.message || "Account created successfully");
+  if (loginData.token) {
+    saveToken(loginData.token);
+    navigate("/dashboard");
   }
+}
+
 
   return (
     <div className="signup-page">
-      
       <h2 className="signup-heading">Create your account</h2>
       <p className="signup-subtext">
         Join the platform that turns your PDFs into answers.
