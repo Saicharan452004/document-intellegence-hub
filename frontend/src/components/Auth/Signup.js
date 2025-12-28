@@ -1,4 +1,5 @@
 import { useState } from "react";
+import API_BASE from "../../config"; 
 import "./Signup.css";
 
 function Signup() {
@@ -9,7 +10,7 @@ function Signup() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/auth/signup", {
+    const res = await fetch(`${API_BASE}/auth/signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password })

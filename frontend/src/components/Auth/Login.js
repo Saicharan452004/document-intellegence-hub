@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { saveToken } from "../../auth";
+import API_BASE from "../../config"; 
 import "./Login.css";
 
 function Login() {
@@ -13,7 +14,7 @@ function Login() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/auth/login", {
+    const res = await fetch(`${API_BASE}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password })

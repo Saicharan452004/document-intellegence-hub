@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import API_BASE from "../../config"; 
 
 function ChatPanel({ token }) {
   const [messages, setMessages] = useState([]);
@@ -14,7 +15,7 @@ function ChatPanel({ token }) {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/qa/ask", {
+      const res = await fetch(`${API_BASE}/qa/ask`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

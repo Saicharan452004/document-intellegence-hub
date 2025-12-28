@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { getToken, logout } from "../../auth";
 import ChatPanel from "../Chat/chatpanel"
 import { useNavigate } from "react-router-dom";
+import API_BASE from "../../config"; 
 import "./dashboard.css";
 
 function Dashboard() {
@@ -15,7 +16,7 @@ function Dashboard() {
   const fileInputRef = useRef(null);
 
   async function loadDocs() {
-    const res = await fetch("http://localhost:5000/documents", {
+    const res = await fetch(`${API_BASE}/documents`, {
       headers: { Authorization: "Bearer " + getToken() }
     });
 
@@ -35,7 +36,7 @@ function Dashboard() {
     const form = new FormData();
     form.append("file", file);
 
-    const res = await fetch("http://localhost:5000/documents/upload", {
+    const res = await fetch(`${API_BASE}/documents/upload`, {
       method: "POST",
       headers: { Authorization: "Bearer " + getToken() },
       body: form
@@ -49,7 +50,7 @@ function Dashboard() {
   }
 
   async function deleteDoc(id) {
-    await fetch(`http://localhost:5000/documents/${id}`, {
+    await fetch(`${API_BASE}/documents/${id}`, {
       method: "DELETE",
       headers: { Authorization: "Bearer " + getToken() }
     });
