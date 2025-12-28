@@ -1,0 +1,75 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.login-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.login-subtext {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Card */
+.auth-container {
+  max-width: 430px;
+  width: 100%;
+  padding: 28px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Form layout */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Inputs */
+.auth-input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+}
+
+.auth-input:focus {
+  border-color: #ff2a7a;
+}
+
+/* Primary button (consistent global theme) */
+.auth-btn {
+  padding: 12px 0;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff6a3d, #ff2a7a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 12px;
+  margin-top: 15px;
+  width: 40%;
+}
+
+.auth-btn:hover {
+  opacity: 0.95;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 9px 20px rgba(255, 0, 78, .45);
+}
+
+.auth-msg {
+  margin-top: 10px;
+  font-size: 14px;
+}

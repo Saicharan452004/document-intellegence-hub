@@ -1,0 +1,67 @@
+.signup-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.signup-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.signup-subtext {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Card */
+.signup-container {
+  max-width: 430px;
+  width: 100%;
+  padding: 34px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Inputs */
+.signup-input {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+}
+
+/* Primary button (matching hero style) */
+.signup-btn {
+  padding: 12px 0;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff6a3d, #ff2a7a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 12px;
+  margin-top: 15px;
+}
+.signup-btn:hover{
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 9px 20px rgba(255, 0, 78, .45);
+}
+.signup-btn:hover {
+  opacity: 0.95;
+}
+
+.signup-msg {
+  margin-top: 10px;
+  color: #2e7d32;
+  font-size: 14px;
+}

@@ -1,0 +1,67 @@
+
+body {
+  margin: 0;
+  background-color: #f8f8f8;
+}
+.home-container {
+  text-align: center;
+  margin-top: 90px;
+}
+.home-title {
+  font-size: 44px;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+.home-subtitle {
+  color: #272727;
+  margin-top: 8px;
+  margin-bottom: 34px;
+  font-size: 17px;
+  opacity: .9;
+}
+.home-card {
+  display: inline-block;
+  padding: 45px 55px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.4);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.home-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(0,0,0,.25);
+}
+.primary-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: .4px;
+  box-shadow: 0 12px 22px rgba(255, 0, 78, .35);
+  transition: all .25s ease;
+  margin-bottom: 8px;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 18px 30px rgba(255, 0, 78, .45);
+}
+.home-links {
+  margin-top: 18px;
+  font-size: 16.5px;
+}
+
+.text-link {
+  color: #ff006a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+  color: #c30050;
+}
