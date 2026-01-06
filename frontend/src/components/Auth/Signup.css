@@ -17,7 +17,6 @@
   margin-bottom: 25px;
 }
 
-/* Card */
 .signup-container {
   max-width: 430px;
   width: 100%;
@@ -27,7 +26,6 @@
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-/* Inputs */
 .signup-input {
   width: 90%;
   padding: 12px;
@@ -36,7 +34,6 @@
   border: 1px solid #dcdcdc;
 }
 
-/* Primary button (matching hero style) */
 .signup-btn {
   padding: 12px 0;
   border-radius: 6px;
@@ -52,10 +49,12 @@
   padding: 12px;
   margin-top: 15px;
 }
+
 .signup-btn:hover{
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 9px 20px rgba(255, 0, 78, .45);
 }
+
 .signup-btn:hover {
   opacity: 0.95;
 }
@@ -64,4 +63,94 @@
   margin-top: 10px;
   color: #2e7d32;
   font-size: 14px;
+}
+
+/* =====================
+   RESPONSIVE ENHANCEMENTS
+   ===================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .signup-page {
+    margin-top: 75px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signup-container {
+    max-width: 520px;
+    padding: 30px;
+    width: 80%;
+  }
+
+  .signup-heading {
+    font-size: 26px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .signup-page {
+    margin-top: 60px;
+    padding: 0 16px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signup-container {
+    max-width: 80%;
+    padding: 26px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+  }
+
+  .signup-heading {
+    font-size: 24px;
+  }
+
+  .signup-input {
+    width: 90%;
+  }
+
+  .signup-btn {
+    width: 70%;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .signup-page {
+    margin-top: 40px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signup-heading {
+    font-size: 22px;
+  }
+
+  .signup-container {
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+  }
+
+  .signup-input {
+    padding: 10px;
+    width: 90%;
+  }
+
+  .signup-btn {
+    width: 60%;
+    padding: 12px;
+  }
+
+  .signup-msg {
+    font-size: 13px;
+  }
 }

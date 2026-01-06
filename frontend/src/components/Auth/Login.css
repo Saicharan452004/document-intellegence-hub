@@ -17,7 +17,6 @@
   margin-bottom: 25px;
 }
 
-/* Card */
 .auth-container {
   max-width: 430px;
   width: 100%;
@@ -27,14 +26,12 @@
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-/* Form layout */
 .auth-form {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-/* Inputs */
 .auth-input {
   padding: 12px;
   border-radius: 6px;
@@ -45,7 +42,6 @@
   border-color: #ff2a7a;
 }
 
-/* Primary button (consistent global theme) */
 .auth-btn {
   padding: 12px 0;
   border-radius: 6px;
@@ -72,4 +68,85 @@
 .auth-msg {
   margin-top: 10px;
   font-size: 14px;
+}
+
+@media (max-width: 992px) {
+  .login-page {
+    margin-top: 70px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .auth-container {
+    max-width: 520px;
+    padding: 24px;
+    width: 80%;
+  }
+
+  .login-heading {
+    font-size: 26px;
+  }
+
+  .auth-btn {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  .login-page {
+    margin-top: 60px;
+    padding: 0 16px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .auth-container {
+    max-width: 100%;
+    padding: 22px;
+    box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+    width: 80%;
+  }
+
+  .login-heading {
+    font-size: 24px;
+  }
+
+  .auth-btn {
+    width: 70%;
+  }
+}
+@media (max-width: 480px) {
+  .login-page {
+    margin-top: 40px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-heading {
+    font-size: 22px;
+  }
+
+  .auth-container {
+    padding: 18px;
+    border-radius: 12px;
+    width: 80%;
+  }
+
+  .auth-input {
+    padding: 10px;
+  }
+
+  .auth-btn {
+    width: 60%;
+    padding: 12px;
+  }
+
+  .auth-msg {
+    font-size: 13px;
+  }
 }

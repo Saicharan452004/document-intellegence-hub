@@ -101,7 +101,7 @@ function ChatPanel({ token }) {
         placeholder="Type your question..."
         value={question}
         onChange={e => setQuestion(e.target.value)}
-        style={{ width: "80%", padding: 8 }}
+        style={{ width: "80%", padding: 8 , marginBottom:"14px"}}
       />
 
       <button
